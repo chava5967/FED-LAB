@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Buttons</title>
+  <style>
+    .color-button {
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="color-button" id="red-btn">Red</button>
+  <button class="color-button" id="green-btn">Green</button>
+  <button class="color-button" id="blue-btn">Blue</button>
+
+  <script>
+    var redButton = document.getElementById('red-btn');
+    var greenButton = document.getElementById('green-btn');
+    var blueButton = document.getElementById('blue-btn');
+
+    redButton.addEventListener('click', function() {
+      document.body.style.backgroundColor = 'red';
+    });
+
+    greenButton.addEventListener('click', function() {
+      document.body.style.backgroundColor = 'green';
+    });
+
+    blueButton.addEventListener('click', function() {
+      document.body.style.backgroundColor = 'blue';
+    });
+  </script>
+</body>
+</html>
