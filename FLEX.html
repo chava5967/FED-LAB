@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FLEX</title>
+<style>
+.flex-container{
+	display:flex;
+	width:100%;
+	height:700px;
+	background-color:gray;
+	align-items:row-wrap;
+}
+.left-container{
+	width:996px;
+	height:250px;
+	border:2px solid white;
+	background-color: blue;
+	font-size:25px;
+}
+.right-container{
+	position:absolute;
+	left:1007px;
+	top:1;
+	width:500px;
+	height:500px;
+	border:2px solid white;
+	background-color: aqua;
+	font-size:25px;
+}
+.middle-container{
+	position:absolute;
+	width:999px;
+	height:243px;
+	top:260px;
+	display:flex;
+	background-color: antiquewhite;
+	flex-direction:row;
+}	
+.child-element{
+	width:499px;
+	height:249px;
+	border:2px solid white;
+	border:2px solid white;
+	font-size:25px;	
+}
+.last-container{
+	position:absolute;
+	width:100%;
+	height:193px;
+	top:510px;
+	font-size:25px;
+	border:2px solid white;
+	background-color: aquamarine;
+}
+</style>
+</head>
+<body>
+<div class="flex-container">
+<div class="left-container" style="color: white;">Header</div>
+<div class="right-container" style="color: black;">Menu</div>
+<div class="middle-container">
+	<div class="child-element" style="color: black;">
+	Article</div>
+	<div class="child-element">
+	Article</div>
+</div>
+<div class="last-container" style="color: black;">Footer</div>
+</div>
+</body>
+</html>
