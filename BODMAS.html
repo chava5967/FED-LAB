@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+function oper(id){
+var a=parseInt(document.getElementById("first").value);
+var b=parseInt(document.getElementById("second").value);
+var c=id.value;
+var d;
+switch(c){
+case "+":d=a+b;
+          break;
+case "-":d=a-b;
+        break;
+case "*":d=a*b;
+        break;
+case "/":d=a/b;
+        break;
+}
+document.getElementById("result").value=d;
+}
+</script>
+</head>
+<body>
+First Value<input type="text" id="first"></br>
+Second value<input type="text" name="second" id="second"><br>
+<input type="button" name="plus" value="+" onclick="oper(this)">
+<br>
+<input type="button" name="sub" value="-" onclick="oper(this)">
+<br>
+<input type="button" name="mul" value="*" onclick="oper(this)">
+<br>
+<input type="button" name="division" value="/" onclick="oper(this)">
+<br>
+Result is : <input type="text" name="result" id="result">
+</body>
+</html>
+
+

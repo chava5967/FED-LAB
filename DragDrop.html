@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.container{
+width:350px;
+height:150px;
+padding:10px;
+border:1px solid #aaaaaa;
+}
+.div2{
+width:350px;
+height:150px;
+padding:10px;
+}
+</style>
+<script>
+function allowDrop(event){
+event.preventDefault();
+}
+function drag(event){
+event.dataTransfer.setData("text/html",event.target.id);
+}
+function drop(ev){
+event.preventDefault();
+var data=event.dataTransfer.getData("text/html");
+event.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<p>Drag Elsa poster into the rectangle </p>
+<div id="div1" class="container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="https://i.insider.com/5dd97f5379d7576f060dc2e5?width=750&format=jpeg&auto=webp" draggable="true"
+ondragstart="drag(event)" width="330" height="160">
+<div id="div1" class="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+</body>
+</html>

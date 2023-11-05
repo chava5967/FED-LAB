@@ -1,0 +1,27 @@
+<!doctype>
+<html>
+<head>
+<script>
+function clickCounter(){
+if(typeof(Storage)!=="undefined"){
+if(sessionStorage.clickcount){
+sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+}
+else{
+sessionStorage.clickcount=1;
+}
+document.getElementById("result").innerHTML="You have clicked the button "+sessionStorage.clickcount+" times int this session";
+}
+else{
+document.getElementById("result").innerHTML="Sorry, your browser is not supported";
+}
+}
+</script>
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">Click Me!</button>
+</p>
+<div id="result"></div>
+<p>Click the button to see the counter increases</p>
+<p>Close the browser tab(or window),&try </p>
+</body></html>
